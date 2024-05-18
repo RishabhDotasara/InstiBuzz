@@ -1,9 +1,16 @@
-import React from "react";
-import sit_back from "../assets/sit_back.webp";
+import React, { useEffect, useState } from "react";
+import sit_back from "./assets/sit_back.webp";
 import { LiaCheckCircleSolid } from "react-icons/lia";
 import { RiStarSFill } from "react-icons/ri";
 
 export default function ThankYou() {
+    
+    const Rate = async (e,rating)=>{
+        e.preventDefault();
+        console.log(rating);
+        //you can write the further code logic here to rate the order and store the rating in the server.
+    }
+
   return (
     <div className="thankyou-page-container">
       <div className="vector-img-cont">
@@ -15,7 +22,7 @@ export default function ThankYou() {
 
       <div className="order-confirmation-card">
         <div className="heading">
-          <LiaCheckCircleSolid />
+          <LiaCheckCircleSolid className="tick-mark"/>
           <span>
             Sit back and relax. Your order is <strong>Confirmed!</strong>
           </span>
@@ -32,13 +39,13 @@ export default function ThankYou() {
 
       <div className="rating-card">
         <div className="heading">Help Us Improve.</div>
-        <div className="stars">
-          <div className="star" style={{ background: "#FF4040" }}></div>
-          <div className="star" style={{ background: "#FF4040" }}></div>
-          <div className="star" style={{ background: "#EE5622" }}></div>
-          <div className="star" style={{ background: "#FFC500" }}></div>
-          <div className="star" style={{ background: "#1FDF67" }}></div>
-        </div>
+        <form className="stars">
+          <button className="star" style={{ background: "#FF4040" }} onClick={(e)=>{Rate(e,1)}}></button>
+          <button className="star" style={{ background: "#FF4040" }} onClick={(e)=>{Rate(e,2)}}></button>
+          <button className="star" style={{ background: "#EE5622" }} onClick={(e)=>{Rate(e,3)}}></button>
+          <button className="star" style={{ background: "#FFC500" }} onClick={(e)=>{Rate(e,4)}}></button>
+          <button className="star" style={{ background: "#1FDF67" }} onClick={(e)=>{Rate(e,5)}}></button>
+        </form>
       </div>
 
       <div className="info-cards">
