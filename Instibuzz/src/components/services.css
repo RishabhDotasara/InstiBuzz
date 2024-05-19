@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     /* background: red; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 
 .ourServices-container
@@ -39,7 +40,7 @@
 }
 .ourServices-container .services-description-cont .heading
 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 6vw, 4rem);
     text-align: center;
     padding: 80px 10px;
 }
@@ -77,6 +78,7 @@
     height:80%;
     width: 15vw;
     border-radius: 10px;
+    aspect-ratio: 9/16   ;
 }
 
 .ourServices-container .services-description-cont .card .desc 
@@ -86,13 +88,14 @@
     gap: 80px;
     height: 100%;
     align-items: center;
+    
     /* justify-content: center; */
 }
 
 .ourServices-container .services-description-cont .card .desc p 
 {
     width: 40%;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 25px;
     font-weight: 300;
 }
@@ -113,6 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background: red; */
 }
 .connect-cont .heading 
 {
@@ -136,11 +140,12 @@
 {
     /* background: red; */
     height: 500px;
-    width: 95%;
+    width: 100%;
+    /* max-width: 80vw; */
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .connect-cont .graphics-cont .card-holder
@@ -149,6 +154,7 @@
     /* background: green; */
     width: calc(100% / 4);
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -167,8 +173,11 @@
 {
     background: #FFE280;
     width: 100%;
-    height: 80%;
+    /* height: 80%; Might need to adjust or remove this */
     border-radius: 10px;
+    aspect-ratio: 9 /10 ;
+    min-width: 100px; /* Example minimum size */
+    max-width: 300px; /* Example maximum size */
 }
 
 .order-cont 
@@ -221,8 +230,11 @@
     {
         flex-direction: column;
         /* background: red; */
-        height: 1400px;
-        padding: 0;
+        gap: 20px;
+        height: fit-content;
+        transform: scale(0.9);
+        padding: 20px 0;
+       
     }
     .connect-cont .graphics-cont .card-holder 
     {
@@ -230,6 +242,8 @@
         width: 70%;
         justify-content: center;
         height: calc(100%/4);
+        align-items: center;
+
     }
     .ourServices-container .services-description-cont .heading
     {
@@ -283,4 +297,28 @@
         /* background: red; */
         padding: 0px 20px;
     }
+    .order-cont h1 
+    {
+        /* font-size: 1.6rem; */
+        /* background: red; */
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width:1500px) and (min-width:700px) {
+    .order-cont h1 {
+        font-size: clamp(1.5rem, 4vw, 2.6rem);
+    }
+    
+    .connect-cont .heading h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+    .connect-cont .graphics-cont 
+    {
+        /* flex-wrap: wrap; */
+        transform: scale(0.9);
+        gap: 10px;
+    }
+   
+    
 }
