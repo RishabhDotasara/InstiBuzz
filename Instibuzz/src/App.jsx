@@ -10,10 +10,11 @@ function App() {
 
   return (
     <>
-      {/* <ThankYou/> */}
-      <OurServices/>
-    </>
+      <ThankYou/>
+      {/* <OurServicev ,./s/> */}    </>
   )
+
+  
 }
 
 export default App

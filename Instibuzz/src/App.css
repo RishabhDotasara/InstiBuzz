@@ -39,6 +39,10 @@
   /* transform: scale(0.9); */
 }
 
+.thankyou-page-container .vector-img-cont span 
+{
+  font-size: clamp(1.2rem,2rem,4rem);
+}
 .thankyou-page-container .vector-img-cont img 
 {
   /* background: yellow; */
@@ -50,7 +54,8 @@
 .order-confirmation-card
 {
   background: #38C68B;
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px); /* Adjusts dynamically between 20px and 40px */
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Adjusts dynamically between 1rem and 1.5rem */
   border-radius: 10px;
   width: 60vw;
   font-size: 1.5rem;
@@ -58,22 +63,26 @@
   display: flex;
   flex-direction: column;
   color: white;
+  
   gap: 30px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .order-confirmation-card .heading
 {
-  font-size: 2.4rem;
+  font-size: clamp(1.2rem,3.5vw,2.4rem);
   display: flex;
   /* background: YELLOW; */
   color: white;
-  width: 97%;
-  align-items: center;
+  width: 96%;
+  max-width: 97%;
+ 
   /* justify-content: space-around; */
   gap: 30px;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 
@@ -81,6 +90,13 @@
 .order-confirmation-card .desc
 {
   width: 80%;
+  /* background: yellow; */
+  text-align: center;
+  font-size: clamp(1rem,1.5vw,4rem);
+  font-weight:  500;
+  /* align-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 

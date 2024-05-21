@@ -14,7 +14,7 @@ export default function ThankYou() {
   return (
     <div className="thankyou-page-container">
       <div className="vector-img-cont">
-        <span style={{}}>
+        <span>
           Hello <strong>UserName!</strong>
         </span>
         <img src={sit_back} alt="Vector Image" />
