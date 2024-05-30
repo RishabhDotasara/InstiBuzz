@@ -5,6 +5,7 @@ import './App.css'
 import ThankYou from './components/ThankYou'
 import OurServices from './components/OurServices'
 import Loading from './components/loading/Loading.jsx'
+import Skeleton from './components/skeleton/Skeleton.jsx'
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
       {/* <ThankYou/> */}
-      <Loading/>
+      {/* <Loading/> */}
+      <Skeleton/>
       {/* <OurServicev ,./s/> */}    </>
   )
 

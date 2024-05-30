@@ -19,7 +19,8 @@
 {
     width: 100px;
     height: 100px;
-    animation: revolve 1s ease-in-out infinite;
+    animation: revolve 1s ease-in-out infinite alternate;
+    perspective: 1000px;
 }
 
 @keyframes revolve
