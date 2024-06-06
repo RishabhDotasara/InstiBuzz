@@ -329,7 +329,7 @@
 }
 .shop-product-price .price.loader 
 {
-    height: 15px;
+    height: 20px;
     width: 30%;
     background: var(--anim-0);
     animation: flicker 1s linear infinite;
