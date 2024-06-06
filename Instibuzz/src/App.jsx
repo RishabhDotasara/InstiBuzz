@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 
-// import './App.css'
-import ThankYou from './components/ThankYou'
-import OurServices from './components/OurServices'
-import Loading from './components/loading/Loading.jsx'
-import Skeleton from './components/skeleton/Skeleton.jsx'
+// // import './App.css'
+// import ThankYou from './components/ThankYou'
+// import OurServices from './components/OurServices'
+// import Loading from './components/loading/Loading.jsx'
+// import Skeleton from './components/skeleton/Skeleton.jsx'
 import Shop from './components/shop/Shop.jsx'
 
 
