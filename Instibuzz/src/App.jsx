@@ -6,7 +6,8 @@ import { useState } from 'react'
 // import OurServices from './components/OurServices'
 // import Loading from './components/loading/Loading.jsx'
 // import Skeleton from './components/skeleton/Skeleton.jsx'
-import Shop from './components/shop/Shop.jsx'
+// import Shop from './components/shop/Shop.jsx'
+import Services from './components/services/Services.jsx'
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       {/* <ThankYou/> */}
       {/* <Loading/> */}
       {/* <Skeleton/> */}
-      <Shop/>
+      {/* <Shop/> */}
+      <Services/>
       {/* <OurServicev ,./s/> */}    </>
   )
 

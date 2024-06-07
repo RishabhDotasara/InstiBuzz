@@ -1,0 +1,221 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    /* background: red; */
+    box-sizing: border-box;
+
+}
+
+.services-container
+{
+    width: 100vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* overflow: hidden; */
+
+}
+
+.header
+{
+    width: 100%;
+    background: #dbaa09;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header h2
+{
+    font-size: clamp(2rem,2.7rem,4rem);
+}
+.header p 
+{
+    width: 50%;
+    text-align: center;
+    font-size: clamp(0.5rem,1rem,3rem);
+}
+
+.services 
+{
+    width: 100vw;
+    height: fit-content;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.services .service 
+{
+    display: flex;
+    width: 80vw;
+    min-height: 60vh;
+    background: #FFE281;
+    padding: 40px;  
+    margin-bottom: 40px;
+}
+
+.services .service:nth-child(even)
+{
+    flex-direction: row-reverse;
+    border-radius: 300px 0px 0px 300px;
+    align-self: flex-end;
+}
+.services .service:nth-child(odd)
+{
+    /* flex-direction: row-reverse; */
+    border-radius:  0px 300px 300px 00px;
+    align-self: flex-start;
+}
+
+.services .service .image 
+{
+    flex: 0.5;
+    width: 40%;
+    height: 100%;
+    background: yellow;
+}
+
+.services .service .image img 
+{
+    width: 100%;
+    /* aspect-ratio: 1/1; */
+    height: 100%;
+}
+.services .service .content 
+{
+    flex: 0.5;
+   
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.services .service .content h2 
+{
+    font-size: 2vw;
+}
+
+.services .service .content p 
+{
+    width: 80%;
+    font-size: 1.15vw;
+}
+
+.contact-us-btn 
+{
+    padding: 10px;
+    width: 40%;
+    background: #42210B;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:600px)
+{
+    .header p 
+    {
+        width: 50%;
+        text-align: center;
+        font-size: clamp(0.5rem,0.7rem,3rem);
+        line-height: 15px;
+    }
+
+    .services
+    {
+        /* background: red; */
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        gap: 20px;
+    }
+
+    .services .service 
+    {
+        width: 90%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+    .services .service:nth-child(even)
+    {
+        flex-direction: column;
+        border-radius: 10px;
+        align-self: center;
+        /* width: 100%; */
+        
+    }
+
+    .services .service:nth-child(odd)
+    {
+        border-radius: 10px;
+        align-self: center;
+        /* width: 100%; */
+    }
+
+    .services .service .image 
+    {
+        background: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .services .service .image img 
+    {
+        height: 100%;
+    }
+    
+    .services .service .content
+    {
+        height: 50%;
+        /* background: blue; */
+        gap: 10px;
+    }
+
+    .services .service .content h2 
+    {
+        font-size: 6vw;
+    }
+
+    .services .service .content p 
+    {
+        font-size: 3vw;
+        width: 95%;
+        line-height: 18px;
+    }
+   
+}
+
+@media screen and (max-width:800px) and (min-width:600px)
+{
+
+    .services .service 
+    {
+        min-height: 30vh;
+    }
+}
