@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Card from './components/my-orders-card/Card'
+import Product from './components/product/product'
 
 
 // // import './App.css'
@@ -22,7 +23,8 @@ function App() {
       {/* <Shop/> */}
       {/* <Services/> */}
       {/* <OurServicev ,./s/> */}    
-      <Card/>  
+      {/* <Card/>   */}
+      {<Product/>}
     </>
   )
 
