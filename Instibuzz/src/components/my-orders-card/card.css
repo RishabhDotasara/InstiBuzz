@@ -1,0 +1,175 @@
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    /* background: red; */
+}
+
+.orders-card
+{
+    /* padding: 20px; */
+    /* background: red; */
+    border: 1px solid grey;
+    /* width: 50vw; */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* transform: scale(1.2); */
+}
+
+.orders-card .block
+{
+    /* background: yellow; */
+    /* margin-bottom: 5px; */
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    /* flex-direction: column; */
+    gap: 10px;
+    }
+    
+.orders-card .block:nth-child(1),.orders-card .block:nth-child(2)
+{
+        
+    border-bottom: 1px solid grey;
+}
+
+.user-info 
+{
+    flex-direction: column;
+}
+
+.sm-text
+{
+    font-size: 0.9rem;
+    color: rgb(52, 51, 51);
+}
+
+.smm-text
+{
+    font-size: 0.7rem;
+    color: rgb(52, 51, 51);
+}
+.orders-card .user-info p 
+{
+    width: 70%;
+}
+
+
+.product-info
+{
+    display: flex;
+    flex-direction: row;
+    /* background: yellow; */
+    height:100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-info .info 
+{
+    /* background-color: red; */
+    width: fit-content;
+    display: flex;
+    gap: 15px;
+}
+
+.product-info .price 
+{
+    /* background: blue; */
+    width: fit-content;
+}
+
+.product-info .info img 
+{
+    height: 80px;
+    object-fit: cover;
+    /* width: 100%; */
+    aspect-ratio: 11/16;
+}
+
+
+.product-info .info .sub-block
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    /* background-color: red; */
+}
+
+/* TIMELINE */
+.timeline
+{
+    /* background: red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline .line 
+{
+    /* position: absolute; */
+    height: 2px;
+    background-color: grey;
+    
+    transform: translateX(-50%);
+    width:20px;
+    z-index: -1;
+}
+
+.timeline .step
+{
+    background: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 10px; */
+
+}
+
+.timeline .step .circle
+{
+    /* background: green; */
+    height: 15px;
+    aspect-ratio: 1/1;
+    padding: px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.smm-grey
+{
+    font-size: 0.7rem;
+    color: gray;
+}
+
+
+
+@media screen and (max-width:768px)
+{
+    .orders-card
+    {
+        transform: scale(0.9);
+    }
+
+    
+}

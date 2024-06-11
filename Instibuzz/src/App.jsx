@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Card from './components/my-orders-card/Card'
 
 
 // // import './App.css'
@@ -7,7 +8,7 @@ import { useState } from 'react'
 // import Loading from './components/loading/Loading.jsx'
 // import Skeleton from './components/skeleton/Skeleton.jsx'
 // import Shop from './components/shop/Shop.jsx'
-import Services from './components/services/Services.jsx'
+// import Services from './components/services/Services.jsx'
 
 
 function App() {
@@ -19,8 +20,10 @@ function App() {
       {/* <Loading/> */}
       {/* <Skeleton/> */}
       {/* <Shop/> */}
-      <Services/>
-      {/* <OurServicev ,./s/> */}    </>
+      {/* <Services/> */}
+      {/* <OurServicev ,./s/> */}    
+      <Card/>  
+    </>
   )
 
   
