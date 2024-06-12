@@ -338,8 +338,8 @@ const Product = () => {
                   <button className="product-btn" onClick={addToCart}>
                     Add to Bag
                   </button>
-                  <button className="product-btn" onClick={addToCart}>
-                    <FaHeart style={{color:"red",fontSize:1.3+"rem"}}/>Wishlist 
+                  <button className="product-btn" onClick={()=>{setIsWishlisted(!isWishlisted)}}>
+                    <FaHeart style={{color:isWishlisted ? "red" : "grey",fontSize:1.3+"rem"}}/>Wishlist 
                   </button>
 
                   </div>
