@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function Timeline() {
 
-    const [current,setCurrent] = useState(2)
+    const [current,setCurrent] = useState(0)
 
     const [steps,setSteps] = useState([
         {
@@ -29,7 +29,7 @@ export default function Timeline() {
                 <>
                 <div className='step'>
                     <div className='circle' style={{background:current >= index ? "green" : "grey"}}></div>
-                    <div className='text sm-text'>{step.title}</div>
+                    <div className='text-title sm-text'>{step.title}</div>
                     <div className='text smm-grey'>{step.date}</div>
                 </div>
                 { index != steps.length-1 && <div className='line' style={{background:current > index ? "green" : "grey"}}></div>}

@@ -116,6 +116,7 @@
     /* background: red; */
     height: 100%;
     width: 100%;
+    padding: 5px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -135,13 +136,16 @@
     z-index: -1;
 }
 
+
+
 .timeline .step
 {
-    background: transparent;
+    /* background:red; */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* gap: 10px; */
 
 }
@@ -168,8 +172,10 @@
 {
     .orders-card
     {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
+
+    
 
     
 }

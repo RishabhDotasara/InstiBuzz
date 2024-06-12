@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./product.css";
+import { FaShield, FaStar } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { FaLock } from "react-icons/fa";
+import { PiKeyReturn } from "react-icons/pi";
 
 import { useParams } from "react-router-dom";
 
 import { isExpired, decodeToken } from "react-jwt";
+import Card from "./Card";
 
 const Product = () => {
   const [imageUrl, setImageUrl] = React.useState([]);
   const [selectedImage, setSelectedImage] = React.useState(imageUrl[0]);
   const [loading, setLoading] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  const [isWishlisted, setIsWishlisted] = useState(true);
+  const [tags,setTags] = useState(['Unisex','100% Cotton','240 GSM','Bio-Washed'])
 
   useEffect(() => {
     getProductDetails();
@@ -37,7 +44,7 @@ const Product = () => {
   const [isCart, setIsCart] = React.useState();
 //   const navigate = useNavigate();
   const params = useParams();
-  const [isLogin, setIsLogin] = React.useState(false);
+  const [isLogin, setIsLogin] = React.useState(true);
   const [sizesAvailable, setSizesAvailable] = React.useState([]);
 
   useEffect(() => {
@@ -86,7 +93,7 @@ const Product = () => {
       alert(result.message);
       localStorage.removeItem("userEmail");
     //   navigate("/");
-      window.location.reload();
+      window.location.reload(); 
     }
 
     const wishlist = result.products;
@@ -238,21 +245,25 @@ const Product = () => {
     <div>
       {
         loading ? <></>:
+        <>
           <div className="product-main-container">
             <div className="product-image-container">
-              <img src={selectedImage} alt="Image" className="product-display-img" />
               <div className="product-all-images">{imageUrl.map(imageButton)}</div>
+              <img src={selectedImage} alt="Image" className="product-display-img" />
             </div>
             <div className="product-product-description">
               <div className="product-product-name">
-                <h2>{name}</h2>
+                <h2>{name}</h2> 
+                <span className="sm">Regular T-shirt</span>
+                <span className="product-product-rating">4.5<FaStar style={{color:"green"}}/></span>
                 <i class={isWishlisted ? "fa fa-heart" : "fa fa-heart-o"} onClick={toggleWishlist}></i>
               </div>
               <div className="product-product-price">
-                <h3>₹{price}</h3>
+                <h3>₹{price}.00</h3>
+                <span className="smm-grey">MRP inclusive of all taxes.</span>
               </div>
               <div className="product-product-size">
-                <p>Select Size</p>
+                <p className="smm">Select Size</p>
               </div>
               <div className="product-size-input-container">
                 <label>
@@ -316,29 +327,22 @@ const Product = () => {
                   <span>2XL</span>
                 </label>
               </div>
-              <div className="product-product-quantity">
-                <p>Quantity</p>
-                <input
-                  type="number"
-                  name="product-quantity"
-                  id="product-quantity"
-                  value={quantity}
-                  min="1"
-                  max="5"
-                  onChange={(e) => {
-                    setQuantity(e.target.value);
-                  }}
-                />
-              </div>
+              
               {isLogin ? (
                 isCart ? (
                   <button onClick={toCart} className="product-btn">
                     Go to Cart
                   </button>
                 ) : (
+                  <div className="product-product-actions">
                   <button className="product-btn" onClick={addToCart}>
-                    Add to Cart
+                    Add to Bag
                   </button>
+                  <button className="product-btn" onClick={addToCart}>
+                    <FaHeart style={{color:"red",fontSize:1.3+"rem"}}/>Wishlist 
+                  </button>
+
+                  </div>
                 )
               ) : (
                 <>
@@ -356,25 +360,63 @@ const Product = () => {
                 <></>
               )}
               <div className="product-product-details product-product-info">
-                <h4>PRODUCT DESCRIPTION</h4>
+                <h3 className="sm">PRODUCT DESCRIPTION</h3>
                 <p>{details}</p>
+                <div className="product-product-details-tags">
+                  {tags.map(tag=>{
+                    return (
+                      <span className="tag">{tag}</span>
+                    )
+                  })}
+                </div>
               </div>
               <hr />
               <div className="product-product-details product-shipping-policy">
-                <h4>SHIPPING POLICY</h4>
-                <p>
+                <h3 className="sm">SHIPPING POLICY</h3>
+                <p className="smm">
                   Your product will be delivered within 15 days of placing the order.
                 </p>
               </div>
               <hr />
               <div className="product-product-details product-return-refund-policy">
-                <h4>EXCHANGE POLICY</h4>
+                <h3 className="sm">EXCHANGE POLICY</h3>
                 <p>Easy exchange up to 7 days of delivery.</p>
+              </div>
+
+              <div className="product-product-details product-product-illustrations">
+                <div className="illustration">
+                  <FaLock className="icon"/>
+                  <span className="smm-grey">100% SECURE PAYMENTS</span>
+                </div>
+                <div className="illustration">
+                  <PiKeyReturn className="icon"/>
+                  <span className="smm-grey">EASY RETURNS AND INSTANT REFUNDS</span>
+                </div>
+                <div className="illustration">
+                  <IoShieldCheckmarkOutline className="icon"/>
+                  <span className="smm-grey">100% GENUINE PRODUCTS</span>
+                </div>
               </div>
               <hr />
             </div>
           </div>
+          
 
+            <div className="product-suggestions-container">
+                    <h2 className="heading">Similar to what you see</h2>
+                    <div className="cards">
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                      <Card image={selectedImage}/>
+                    </div>
+            </div>
+        </>
       }
     </div>
 
