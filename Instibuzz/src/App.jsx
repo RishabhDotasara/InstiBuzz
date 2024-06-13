@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import Card from './components/my-orders-card/Card'
-import Product from './components/product/product'
+import Profile from './components/Profile/Profile'
+// import Card from './components/my-orders-card/Card'
+// import Product from './components/product/product'
 
 
 // // import './App.css'
@@ -24,7 +25,8 @@ function App() {
       {/* <Services/> */}
       {/* <OurServicev ,./s/> */}    
       {/* <Card/>   */}
-      {<Product/>}
+      {/* {<Product/>} */}
+      <Profile/>
     </>
   )
 
